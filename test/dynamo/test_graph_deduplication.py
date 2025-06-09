@@ -782,7 +782,9 @@ class <lambda>(torch.nn.Module):
 
         repeated_subgraph0 = self.repeated_subgraph0
         invoke_subgraph = torch.ops.higher_order.invoke_subgraph(repeated_subgraph0, 'subgraph_0', arg0_1, arg1_1);  repeated_subgraph0 = None
+
         _enter_autocast = torch.amp.autocast_mode._enter_autocast();  _enter_autocast = None
+
         getitem: "f32[]" = invoke_subgraph[0];  invoke_subgraph = None
 
         sum_1: "f32[]" = torch.ops.aten.sum.default(getitem);  getitem = None
@@ -791,6 +793,7 @@ class <lambda>(torch.nn.Module):
         repeated_subgraph0_1 = self.repeated_subgraph0
         invoke_subgraph_1 = torch.ops.higher_order.invoke_subgraph(repeated_subgraph0_1, 'subgraph_0', arg0_1, arg1_1);  repeated_subgraph0_1 = arg0_1 = arg1_1 = None
         getitem_1: "f32[]" = invoke_subgraph_1[0];  invoke_subgraph_1 = None
+
         _exit_autocast = torch.amp.autocast_mode._exit_autocast();  _exit_autocast = None
 
         sum_2: "f32[]" = torch.ops.aten.sum.default(getitem_1);  getitem_1 = None
